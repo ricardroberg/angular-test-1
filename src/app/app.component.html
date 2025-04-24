@@ -1,0 +1,18 @@
+<div id="parent">
+  <span>THIS IS THE PARENT</span>
+  <app-first-child [counter]="counter" />
+  <app-second-child
+    (sNumberChange)="handleGrandChildNumberChange()"
+    [counter]="counter"
+  />
+</div>
+
+<div id="parent-button">
+  <button (click)="addNumber()">+</button>
+  <button (click)="removeNumber()">-</button>
+</div>
+
+<div>
+  <span>THIS IS THE GRAND CHILD NUMBER</span>
+  <span>{{ sNumberChange }}</span>
+</div>
